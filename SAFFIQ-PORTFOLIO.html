@@ -2199,15 +2199,22 @@ document.addEventListener('keydown', e => {
 
 /* ===================== CONTACT FORM — FORMSPREE ===================== */
 /*
-  HOW TO ACTIVATE:
-  1. Sign up free at https://formspree.io
-  2. Click "New Form" → name it (e.g. "Portfolio Contact")
-  3. Copy your Form ID — it looks like "xabcdefg" (8 chars after /f/)
-  4. Paste it into FORMSPREE_ID below, replacing YOUR_FORMSPREE_ID
-  5. Formspree sends every submission straight to your registered email
-  6. Free plan: 50 submissions/month — plenty for a portfolio
-*/
-const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // ← paste your ID here
+  <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/mjglndkj"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
 async function handleSubmit() {
   const nameEl   = document.getElementById('f-name');
